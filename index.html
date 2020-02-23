@@ -8,11 +8,11 @@
 </head>
 <body>
   <div class="keys">
-    <div data-key="65" class="key" ontouchstart="playSound()">
+    <div data-key="65" class="key">
       <kbd>A</kbd>
       <span class="sound">clap</span>
     </div>
-    <div data-key="83" class="key" ontouchstart="playSound()">
+    <div data-key="83" class="key">
       <kbd>S</kbd>
       <span class="sound">hihat</span>
     </div>
@@ -83,6 +83,8 @@
   keys.forEach(key => key.addEventListener('transitionend', removeTransition));
 
   window.addEventListener("keydown", playSound);
+
+  window.addEventListener("touchstart", playSound);
 
 </script>
 
