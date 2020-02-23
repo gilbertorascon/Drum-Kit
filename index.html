@@ -84,6 +84,12 @@
 
   window.addEventListener("keydown", playSound);
 
+  var mq = window.matchMedia( "(max-width: 768px)" );
+  
+  if (mq.matches) {
+    window.addEventListener("touchstart", playSound);
+  }
+
 </script>
 
 
